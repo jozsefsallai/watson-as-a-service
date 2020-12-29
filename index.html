@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WATSON-as-a-Service</title>
+  <link href="public/style.css" rel="stylesheet">
+  <script src="public/app.js" defer></script>
+
+  <meta name="title" content="WATSON-as-a-Service">
+  <meta name="description"
+    content="A web API for the Wasted but Amazing Turing-incomplete Stack-based Object Notation format.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://watson-as-a-service.vercel.app/">
+  <meta property="og:title" content="WATSON-as-a-Service">
+  <meta property="og:description"
+    content="A web API for the Wasted but Amazing Turing-incomplete Stack-based Object Notation format.">
+  <meta property="og:image"
+    content="https://watson-as-a-service.vercel.app/public/splash.png">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://watson-as-a-service.vercel.app/">
+  <meta property="twitter:title" content="WATSON-as-a-Service">
+  <meta property="twitter:description"
+    content="A web API for the Wasted but Amazing Turing-incomplete Stack-based Object Notation format.">
+  <meta property="twitter:image"
+    content="https://watson-as-a-service.vercel.app/public/splash.png">
+</head>
+<body>
+  <div class="page">
+    <h1>WATSON-as-a-Service</h1>
+
+    <p>
+      The power of <a href="https://github.com/genkami/watson" target="_blank" rel="noreferrer noopener">WATSON</a>,
+      now as a freely usable API.
+    </p>
+
+    <h2>Endpoints</h2>
+
+    <p>
+      <pre><code>POST https://watson-as-a-service.vercel.app/api/encode</code></pre>
+    </p>
+
+    <p>
+      Will WATSON-encode the provided request body. By default, it will perform
+      the encoding as a string, but you can specify a <code>type</code>
+      parameter to use other data types. <strong>Accepted values:</strong>
+      int, float, string, object, array, bool. Anything else will be interpreted
+      as string.
+    </p>
+
+    <p>
+      Each response will contain two fields &ndash; <code>ok</code> (a boolean
+      which specifies whether the request has succeeded) and either a
+      <code>data</code> (WATSON-encoded string) or an <code>error</code>
+      (string).
+    </p>
+
+    <hr />
+
+    <p>
+      <pre><code>POST https://watson-as-a-service.vercel.app/api/decode</code></pre>
+    </p>
+
+    <p>
+      Will decode a WATSON-encoded string.
+    </p>
+
+    <p>
+      Each response will contain two fields &ndash; <code>ok</code> (a boolean
+      which specifies whether the request has succeeded) and either a
+      <code>data</code> (a string that contains the decoded data) or an
+      <code>error</code> (string).
+    </p>
+
+    <h2>Demo</h2>
+
+    <form class="watson-form">
+      <select name="operation" class="operation-select">
+        <option value="encode" selected>Encode</option>
+        <option value="decode">Decode</option>
+      </select>
+
+      <select name="datatype" class="datatype-select">
+        <option value="string" selected>String</option>
+        <option value="int">Integer</option>
+        <option value="float">Float</option>
+        <option value="bool">Boolean</option>
+        <option value="object">JSON object</option>
+        <option value="array">JSON array</option>
+      </select>
+
+      <textarea name="input" placeholder="Write something here..."></textarea>
+
+      <button type="submit">Encode/Decode</button>
+    </form>
+
+    <div class="response-container"></div>
+
+    <footer>
+      <hr>WATSON-as-a-Service is an open-source project by <a href="https://github.com/jozsefsallai" target="_blank" rel="noreferrer noopener">@jozsefsallai</a>.
+      You can find its source code on <a href="https://github.com/jozsefsallai/watson-as-a-service" target="_blank" rel="noreferrer noopener">GitHub</a>.
+      Original WATSON library and spec by <a href="https://github.com/genkami/watson" target="_blank" rel="noreferrer noopener">genkami</a>.
+    </footer>
+  </div>
+</body>
+</html>

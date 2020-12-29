@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500');
+
+body {
+  margin: 0;
+  font: 18px / 1.8 'Roboto', 'Segoe UI', Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+a {
+  color: #5c4225;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #44311b;
+}
+
+.page {
+  width: 980px;
+  margin: 3em 10em;
+}
+
+h1, h2 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+code {
+  font-family: 'Source Code Pro';
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  background: #222;
+}
+
+pre {
+  background: #222;
+  padding: 10px;
+  border-radius: 3px;
+
+  overflow-x: auto;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+img {
+  max-width: 100%;
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+textarea, button, select {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+}
+
+textarea, select {
+  font-family: 'Source Code Pro';
+  padding: 15px 20px;
+  border: 1px solid #aaa;
+  resize: none;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+textarea:focus {
+  border: 1px solid #888;
+}
+
+select {
+  height: auto;
+}
+
+button {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  border: 0;
+  padding: 15px 25px;
+  background: #5c4225;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #44311b;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  width: 75%;
+  background: #bbb;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.example {
+  text-align: center;
+}
+
+footer {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  font-size: 0.8em;
+  color: #888;
+}
+
+.response-container {
+  margin: 15px 0;
+}
+
+.error {
+  color: red;
+}
+
+ @media only screen and ( max-width: 1180px ) {
+  .page {
+    width: 760px;
+    margin: 3em 6em;
+  }
+ }
+
+@media only screen and ( max-width: 890px ) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .page {
+    width: auto;
+    margin: 1em;
+  }
+}
